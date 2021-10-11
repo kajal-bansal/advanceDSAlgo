@@ -38,6 +38,14 @@ public class LinkedList{
         }
         current.next = newNode;
     }
+
+    public ListNode deleteFirst(){
+        if (head==null){ return null;}
+        ListNode temp = head;
+        head = head.next;
+        temp.next = null;
+        return temp;
+    }
     public static void main(String args[]){
         LinkedList sll = new LinkedList();
         sll.insertFirst(11);
